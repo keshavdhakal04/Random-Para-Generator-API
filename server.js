@@ -4,7 +4,6 @@ const cors = require("cors");
 const app = express();
 // IMPORTANT: Use process.env.PORT for Render, and fall back to 4000 for local use.
 const port = process.env.PORT || 4000;
-
 app.use(cors());
 
 // 64 realistic paragraphs (each paragraph is 3-5 sentences) - Data has been consolidated into the server file
@@ -77,7 +76,7 @@ const paragraphs = [
 
 /**
  * Root Endpoint: /
- * Serves as a health check and documentation index (Fixes the "Cannot GET /" error).
+ * Serves as a health check and documentation index (This is the fix for "Cannot GET /").
  */
 app.get('/', (req, res) => {
     res.json({
